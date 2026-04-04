@@ -1,0 +1,6 @@
+{%extends "layout.html"%}
+{% block content %}
+    {% for id in ids %}
+        <h2>{{ id.name }}</h2>
+    {% endfor %}
+{% endblock %}
