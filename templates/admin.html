@@ -9,6 +9,18 @@
 
     <h1>Admin Panel</h1>
 
+
+    <details>
+        <summary>Current IDs</summary>
+        <ul>
+            {% for id in ids %}
+                <li>{{ id.id }}: {{ id.name }}</li>
+            {% endfor %}
+        </ul>
+    </details>
+
+    <br>
+
     <details class="unselectable" id="add-id">
         <summary>add id</summary>
         <ul>
@@ -19,6 +31,20 @@
 
         </ul>
     </details>
+
+    <br>
+    
+    <details class="unselectable" id="remove-id">
+        <summary>remove id</summary>
+        <ul>
+            <form action="/remove" method="post">
+                <input type="number" id="remove_id" name="remove_id" placeholder="ID to Remove" required>
+                <button type="submit">Remove ID</button>
+            </form>
+
+        </ul>
+    </details>
+
 
 
 </body>
